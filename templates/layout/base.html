@@ -40,12 +40,29 @@
         {{> components/common/body }}
         {{> components/common/footer }}
 
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script> 
         <script>window.__webpack_public_path__ = "{{cdn 'assets/dist/'}}";</script>
         <script src="{{cdn 'assets/dist/theme-bundle.main.js'}}"></script>
+        <script src="{{cdn 'assets/js/main.js'}}"></script>
 
         <script>
             // Exported in app.js
             window.stencilBootstrap("{{page_type}}", {{jsContext}}).load();
+        </script>
+
+        <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-36251023-1']);
+          _gaq.push(['_setDomainName', 'jqueryscript.net']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
         </script>
 
         {{{footer.scripts}}}
