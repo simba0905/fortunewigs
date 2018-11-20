@@ -38,7 +38,10 @@
             position: relative;
             background: #ffffff;
             border: solid 1px #d0d0cc;
-            min-height: 470px;
+            min-height: 372px;
+            @include breakpoint("medium") {
+                min-height: 470px;
+            }
             .card-figure {
                 .card-figcaption {
                     .card-figcaption-body {
@@ -51,9 +54,9 @@
             }
             .card-body {
                 text-align: center;
-                .card-text {
-                    color: #2397b7;
-                }
+                // .card-text {
+                //     color: #2397b7;
+                // }
                 .card-title {
                     font-weight: bold;
                 }
