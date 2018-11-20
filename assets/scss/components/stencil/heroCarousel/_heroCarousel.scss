@@ -47,6 +47,9 @@
         @include breakpoint("medium") {
             right: 25px;
         }
+        &::before {
+            background-image: url('../img/right-arrow.png');
+        }
     }
 
     .slick-prev {
@@ -55,6 +58,9 @@
         @include breakpoint("medium") {
             left: -25px;
 
+        }
+        &::before {
+            background-image: url('../img/left-arrow.png');
         }
     }
 
