@@ -37,11 +37,13 @@
     .slick-next,
     .slick-prev {
         top: 50%;
+        background: transparent;
+        border: none;
     }
 
     .slick-next {
         right: 15px;
-
+        opacity: 0;
         @include breakpoint("medium") {
             right: 25px;
         }
@@ -49,14 +51,16 @@
 
     .slick-prev {
         left: 15px;
-
+        opacity: 0;
         @include breakpoint("medium") {
-            left: 25px;
+            left: -25px;
+
         }
     }
 
     .slick-dots {
         bottom: spacing("third");
+        
 
         @include breakpoint("medium") {
             bottom: spacing("single");
@@ -64,8 +68,40 @@
 
         // scss-lint:disable SelectorDepth, NestingDepth
         li {
+            background: transparent;
+            background-color: transparent;
             @include carouselOpaqueBackgrounds($slick-dot-bgColor);
+            button {
+                border: 1px solid #fff;
+            }
+            &.slick-active {
+                button::before {
+                    background: #fff;
+                    color: #fff;
+                }
+            }
         }
+    }
+
+    &:hover {
+        .slick-prev {
+            opacity: 1;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            left: 25px;
+        }
+        .slick-next {
+            opacity: 1;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            right: 25px;
+        }   
     }
 }
 
