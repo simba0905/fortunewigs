@@ -30,6 +30,35 @@
         @include breakpoint("medium") {
             width: grid-calc(3, $total-columns);
         }
+        article.card {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 10px;
+            position: relative;
+            background: #ffffff;
+            border: solid 1px #d0d0cc;
+            min-height: 470px;
+            .card-figure {
+                .card-figcaption {
+                    .card-figcaption-body {
+                        a {
+                            background-color: rgba(0,0,0,0.8);
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            .card-body {
+                text-align: center;
+                .card-text {
+                    color: #2397b7;
+                }
+                .card-title {
+                    font-weight: bold;
+                }
+            }
+        }
     }
 }
 

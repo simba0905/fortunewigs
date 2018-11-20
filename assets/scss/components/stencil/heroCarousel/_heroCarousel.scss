@@ -68,9 +68,8 @@
 
         // scss-lint:disable SelectorDepth, NestingDepth
         li {
-            background: transparent;
-            background-color: transparent;
-            @include carouselOpaqueBackgrounds($slick-dot-bgColor);
+
+            @include carouselOpaqueBackgrounds(transparent);
             button {
                 border: 1px solid #fff;
             }
