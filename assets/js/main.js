@@ -17,18 +17,18 @@ $(document).ready(function() {
 	$(id).css('top',  winH/2-$(id).height()/2);
 	$(id).css('left', winW/2-$(id).width()/2);
 
-	if (localStorage.getItem('popup') != 'loaded') {
+	// if (localStorage.getItem('popup') != 'loaded') {
 		$(id).fadeIn(2000); 
 		$('#mask').fadeIn(500);	
 		$('#mask').fadeTo("slow",0.9);
 		$( '#snow' ).fallingSnow();
-		localStorage.setItem('popup', 'loaded');
-	} else {
-		$(id).hide();
-		$('#mask').hide();
-		$('.window').hide();
-		$( '#snow' ).hide();
-	}
+	// 	localStorage.setItem('popup', 'loaded');
+	// } else {
+	// 	$(id).hide();
+	// 	$('#mask').hide();
+	// 	$('.window').hide();
+	// 	$( '#snow' ).hide();
+	// }
 
 	//if close button is clicked
 	$('.window .close').click(function (e) {
